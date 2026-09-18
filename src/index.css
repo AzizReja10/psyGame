@@ -42,14 +42,14 @@ body {
   z-index: 3;
   max-width: 640px;
   margin: 0 auto;
-  padding: 64px 24px 48px;
+  padding: 24px 24px 32px;
 }
 
 .kicker {
   color: var(--mint);
   font-size: 14px;
   font-family: 'IBM Plex Mono', monospace;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -63,17 +63,17 @@ h1 {
 
 .lede {
   color: var(--muted);
-  margin-top: 14px;
-  font-size: 16px;
+  margin-top: 12px;
+  font-size: 15px;
   max-width: 480px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .stack {
-  margin-top: 44px;
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .testrow {
@@ -662,6 +662,13 @@ button.viewLeader:hover svg {
 
 button.viewLeader:active {
   transform: scale(0.95);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 20px;
 }
 
 @keyframes color_anim {

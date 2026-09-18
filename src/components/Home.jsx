@@ -3,13 +3,14 @@ import { TextAnimate } from "@/components/ui/text-animate"
 const Home = ({ onPick, onLeaderboard }) => {
   return (
     <div className='wrap'>
-      <div className="kicker enter enter-1"><TextAnimate animation="slideUp" by="word" as="h1">two-minute cognitive tests</TextAnimate></div>
+      <div className="kicker enter enter-1"><TextAnimate animation="blurInUp" by="word" as="h1">two-minute cognitive tests</TextAnimate></div>
 
       <h1 className='grad-text enter enter-2'>How sharp is your brain, right now?</h1>
       <p className='lede enter enter-3'>
         Two short tests grounded in real psychology research. See your numbers, compare against typical human ranges,
         and save your best run.
       </p>
+      <p className="lede enter enter-4" style={{fontWeight:'bolder', marginTop: '6px'}}> Hold  the button to see changes.</p>
       <div className="stack enter enter-4">
         <div className="testrow" style={{cursor:'pointer'}} onClick={() => onPick('reaction')}>
           <div>
