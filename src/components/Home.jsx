@@ -10,7 +10,7 @@ const Home = ({ onPick, onLeaderboard }) => {
         Two short tests grounded in real psychology research. See your numbers, compare against typical human ranges,
         and save your best run.
       </p>
-      <p className="lede enter enter-4" style={{fontWeight:'bolder', marginTop: '6px'}}> Hold  the button to see changes.</p>
+      <p className="lede enter enter-4" style={{fontWeight:'bolder', marginTop: '6px',color:'black'}}> Hold  the button to see changes.</p>
       <div className="stack enter enter-4">
         <div className="testrow" style={{cursor:'pointer'}} onClick={() => onPick('reaction')}>
           <div>
