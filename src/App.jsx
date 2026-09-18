@@ -7,6 +7,20 @@ import Leaderboard from './components/Leaderboard';
 import { CursorifyProvider,DefaultCursor } from '@cursorify/react';
 const App = () => {
   const [view, setView] = useState('home');
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+      const isWideScreen = window.innerWidth >= 768;
+      setIsDesktop(hasFinePointer && isWideScreen);
+    };
+
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
   useEffect(() => {
     function handleMove(e) {
       const s = document.getElementById('spotlight');
@@ -18,14 +32,15 @@ const App = () => {
     document.addEventListener('mousemove', handleMove);
     return () => document.removeEventListener('mousemove', handleMove);
   }, []);
+
   return (
     <CursorifyProvider
-      enabled={true}
+      enabled={isDesktop}
       cursor={<DefaultCursor />}
       opacity={1}
       delay={3}
       defaultCursorVisible={false}
-      breakpoint={0}>
+      breakpoint={768}>
       <>
        <div className="big-aurora">
         <div className="blob blob1"></div>
